@@ -12,6 +12,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    /* sticky header 5.3 */
+    position:sticky;
+    /* background-color: white; */
+    background: white;
+    top: 0;
+    z-index: 1;
   }
 
   .header__logo {
@@ -43,8 +49,11 @@ header {
     transition-timing-function: ease-in;
   }
 
+  /* правая часть с картинкой солнца и батареи Right Part with pic of Sun and sun-battery */
   .about__image {
     width: 500px;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
   }
    
   .about__sun-image {
@@ -81,8 +90,11 @@ header {
     margin-top: 20px;
   }
 
+  /* левая часть с информацией и кнопкой Узнать подробнее Left Part with Know more button */
   .about__info {
     max-width: 550px;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
   }
 
   .form__container {
@@ -189,7 +201,7 @@ header {
     margin-right: 80px;
   }
 
-  h3 {
+  footer h3 {
     font-size: 16px;
     opacity: 0.7;
     margin-bottom: 30px;
@@ -198,7 +210,7 @@ header {
   .footer__links {
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 15px; */
+    
   }
 
   .footer__links a {
@@ -206,3 +218,117 @@ header {
   }
 
   /* footer  */
+
+  /*animation of sun*/
+
+ @keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+ /* .about__sun-image:hover { */
+  .about__sun-image {
+  transform: rotate(90deg);
+  animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+}
+    /*animation*/
+
+    /* --- */
+    /* responsive_mobile_adaptation */
+
+    /* Project task 6.1
+    IPhone SE  */
+
+    /* example: 
+    --
+    @media (max-width: 600px) {
+      body {
+        background-color: white;
+      }
+    } */
+
+  /* AdaptationForTabs 720px to 1024px */
+  @media (max-width: 1024px) {
+    .about {
+        padding: 115px 20px;
+    }
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+ }
+  /* @media (max-width: 720px) {
+    ...
+  } */
+
+    @media (max-width: 720px) {
+      header {
+          padding: 10px;
+      }
+    
+      .header__logo {
+          height: 20px;
+      }
+    
+      header a {
+          margin-right: 10px;
+      }
+    
+      .about {
+          flex-direction: column-reverse;
+          padding: 50px 10px;
+      }
+    
+      .about h1 {
+          font-size: 36px;
+          line-height: 40px;
+      }
+    
+      .about__image {
+          width: 280px;
+      }
+    
+      .about__sun-image {
+          width: 75px;
+          height: 75px;
+      }
+    
+      .form {
+          padding: 50px 10px;
+      }
+    
+      .form h1 {
+          font-size: 36px;
+      }
+    
+      footer {
+          padding: 50px 10px;
+      }
+    
+      .footer__container {
+          flex-direction: column;
+      }
+   }
+
+   /* ApadtEnd -_- */
+
+  

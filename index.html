@@ -2,8 +2,13 @@
 <html lang="ru">
 <head>
   <title>Солнечные батареи GreenCorp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- подключение open-source: AnimateCSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- подключение open-source: FontAwesome -->
+  <link rel="stylesheet" href="fa6p2p0web/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">>
 </head>
 <body>
   <header>
@@ -14,12 +19,16 @@
     </div>
   </header>
   <section class="about">
-    <div class="about__info">
+    <!-- добавляем анимацию как классы: animate__animated animate__fadeInLeft animate__slow-->
+    <div class="about__info animate__animated animate__fadeInLeft animate__slow">
       <h1>Солнечные панели GreenRobotic</h1>
       <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-      <button class="ease">Узнать подробнее</button>
+      <button class="ease">Узнать подробнее
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
     </div>
-    <div class="about__images">
+    <!-- добавляем анимацию как классы: animate__animated animate__fadeInRight animate__slow-->
+    <div class="about__images animate__animated animate__fadeInRight animate__slow">
       <img class="about__sun-image" src="img/sun.png">
       <img class="about__image" src="img/solar-panel.png">
     </div>

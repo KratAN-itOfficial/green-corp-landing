@@ -70,7 +70,18 @@ header {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    /*2/12/22 - added pos: realtive*/ 
   }
+
+  /*2/12/22 OrbCanvas 3rd module*/
+  .orb-canvas {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    height: 100%;
+  }
+  /*2/12/22 OrbCanvas 3rd module*/
 
   .about h1 {
     font-size: 70px;

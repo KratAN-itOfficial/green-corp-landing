@@ -8,20 +8,28 @@ body {
   }
 
 header {
+    background: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     /* sticky header 5.3 */
-    position:sticky;
+    position: fixed; /*16.12.22 sticky->fixed*/
     /* background-color: white; */
-    background: white;
     top: 0;
+    left: 0;
+    right: 0;
+    transition: box-shadow, background-color .25s ease;
     z-index: 1;
   }
 
   .header__logo {
     height: 30px;
+  }
+
+  .header__scrolled {
+    background-color: white;
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);;
   }
 
   a {
@@ -65,7 +73,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 115px; 
+    padding-top: 200px; 
     padding-bottom: 115px;
     background: url('img/back.png') no-repeat;
     background-position: center;
@@ -109,6 +117,10 @@ header {
     animation-iteration-count: 1;
   }
 
+  /*18.12.22*/
+  .about {
+    padding-top: 200px;
+  }
 
   /* блок ОСОБЕННОСТИ_FEATURES */
   .features {
